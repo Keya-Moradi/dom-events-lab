@@ -29,7 +29,6 @@ buttons.forEach((button) => {
                     operator = value;
                     previousInput = currentInput;
                     currentInput = '';
-                    display.innerText = operator; 
                 }
             }
         }
