@@ -1,109 +1,133 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(135deg, #d5f7f6, #a1e2e6);
+  overflow: hidden; /* Prevents scrollbar from appearing */
+  position: relative; /* Needed for absolutely positioned children */
+}
+
+h1 {
+  font-size: 2em;
+  color: rgb(184, 91, 235); /* Change title color to hot pink */
+  margin-bottom: 20px;
+  z-index: 1; /* Ensure the title stays above the emojis */
+  text-align: center; /* Center the title text */
+}
+
+.display {
+  width: 100%;
+  height: 50px;
+  font-size: 24px;
+  padding: 12px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* Center text vertically */
+  color: #004d61;
+  border-radius: 4px;
+  background-color: #a1e2e6;
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+#calculator {
+  padding: 24px;
+  width: 100%;
+  max-width: 300px;
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid #004d61;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Ensures the calculator stays above the emojis */
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row:last-child::before {
+  width: 40px;
+  height: 40px;
+}
+
+.button {
+  padding: 0;
+  width: 60px; /* Increase the size of the button for better interaction */
+  height: 60px; /* Increase the size of the button for better interaction */
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #004d61;
+  background-color: #a1e2e6;
+  border-radius: 4px;
+  border: 2px solid #004d61;
+  transition: transform 0.1s;
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+.button.operator {
+  background-color: #79d4d5;
+}
+
+.button.equals {
+  background-color: #4bb9b9;
+}
+
+.emoji {
+  position: absolute;
+  font-size: 2rem;
+  animation: fall 5s linear infinite;
+  z-index: 0; /* Ensure emojis stay behind the title and calculator */
+}
+
+@keyframes fall {
+  0% {
+    top: -5%;
+    opacity: 1;
   }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    font-family: system-ui, sans-serif;
-    background: linear-gradient(135deg, #d5f7f6, #a1e2e6);
-    overflow: hidden; /* Prevents scrollbars from appearing */
-    position: relative; /* Needed for absolutely positioned children */
+  100% {
+    top: 105%;
+    opacity: 0;
   }
-  
-  h1 {
-    font-size: 2em;
-    color: rgb(146, 84, 241); /* Change title color to hot pink */
-    margin-bottom: 20px;
-    z-index: 1; /* Ensure the title stays above the emojis */
-  }
-  
-  .display {
-    width: 100%;
-    height: 50px;
-    font-size: 24px;
-    padding: 12px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center; /* Center text vertically */
-    color: #004d61;
-    border-radius: 4px;
-    background-color: #a1e2e6;
-    overflow: hidden; /* Hide overflow text */
-    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
-    white-space: nowrap; /* Prevent text from wrapping */
-  }
-  
-  #calculator {
-    padding: 24px;
-    width: 300px;
-    gap: 32px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    border: 1px solid #004d61;
-    background-color: #ffffff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10; /* Ensures the calculator stays above the emojis */
-  }
-  
-  .row {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .row:last-child::before {
-    width: 40px;
-    height: 40px;
-  }
-  
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
   .button {
-    padding: 0;
-    width: 60px; /* Increase the size of the button for better interaction */
-    height: 60px; /* Increase the size of the button for better interaction */
-    cursor: pointer;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #004d61;
-    background-color: #a1e2e6;
-    border-radius: 4px;
-    border: 2px solid #004d61;
-    transition: transform 0.1s;
+    width: 50px; /* Adjust button size for smaller screens */
+    height: 50px; /* Adjust button size for smaller screens */
+    font-size: 20px; /* Adjust font size for smaller screens */
   }
-  
-  .button:active {
-    transform: scale(0.9);
+
+  .display {
+    height: 40px; /* Adjust display height for smaller screens */
+    font-size: 20px; /* Adjust font size for smaller screens */
   }
-  
-  .button.operator {
-    background-color: #79d4d5;
+
+  #calculator {
+    padding: 16px; /* Reduce padding for smaller screens */
+    gap: 24px; /* Reduce gap between rows for smaller screens */
   }
-  
-  .button.equals {
-    background-color: #4bb9b9;
+
+  h1 {
+    font-size: 1.5em; /* Adjust title font size for smaller screens */
   }
-  
-  .emoji {
-    position: absolute;
-    font-size: 2rem;
-    animation: fall 5s linear infinite;
-    z-index: 0; /* Ensure emojis stay behind the title and calculator */
-  }
-  
-  @keyframes fall {
-    0% {
-      top: -5%;
-      opacity: 1;
-    }
-    100% {
-      top: 105%;
-      opacity: 0;
-    }
-  }
-  
+}
