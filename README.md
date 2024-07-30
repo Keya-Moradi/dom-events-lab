@@ -46,7 +46,7 @@ git clone https://github.com/Keya-Moradi/DOM-EVENTS.git
 cd DOM-EVENTS
 ```
 
-1. Open the Project:
+2. Open the Project:
 Open the index.html file in your preferred web browser. You can do this by double-clicking the file or by right-clicking and selecting "Open with" followed by your browser choice.
 
 ### Usage
