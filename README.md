@@ -1,4 +1,4 @@
-<!-- # Keya's Cool Calculator
+<!-- # Keya's Dope Calculator
 
 This lab provides an opportunity to practice DOM manipulation by building a calculator in the browser.
 
@@ -70,4 +70,4 @@ This lab provides an opportunity to practice DOM manipulation by building a calc
 
 ### Page Title
 
-- The page title is set to "Keya's cool calculator". -->
+- The page title is set to "Keya's Dope Calculator". -->

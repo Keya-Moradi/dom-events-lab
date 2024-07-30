@@ -47,8 +47,8 @@
   
   .button {
     padding: 0;
-    width: 60px;
-    height: 60px;
+    width: 60px; 
+    height: 60px; 
     cursor: pointer;
     font-size: 24px;
     display: flex;
@@ -72,4 +72,3 @@
   .button.equals {
     background-color: #4bb9b9;
   }
-  

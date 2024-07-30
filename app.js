@@ -5,32 +5,33 @@ let operator = '';
 let previousInput = '';
 
 buttons.forEach((button) => {
-  button.addEventListener('click', (event) => {
-    const value = event.target.innerText;
+    button.addEventListener('click', (event) => {
+        const value = event.target.innerText;
 
-    if (event.target.classList.contains('number')) {
-      currentInput += value;
-      display.innerText = currentInput;
-    } else if (event.target.classList.contains('operator')) {
-      if (value === 'C') {
-        currentInput = '';
-        previousInput = '';
-        operator = '';
-        display.innerText = '';
-      } else if (value === '=') {
-        if (operator && previousInput !== '' && currentInput !== '') {
-          currentInput = String(eval(`${previousInput} ${operator} ${currentInput}`));
-          display.innerText = currentInput;
-          operator = '';
-          previousInput = '';
+        if (event.target.classList.contains('number')) {
+            currentInput += value;
+            display.innerText = currentInput;
+        } else if (event.target.classList.contains('operator')) {
+            if (value === 'C') {
+                currentInput = '';
+                previousInput = '';
+                operator = '';
+                display.innerText = '';
+            } else if (value === '=') {
+                if (operator && previousInput !== '' && currentInput !== '') {
+                    currentInput = String(eval(`${previousInput} ${operator} ${currentInput}`));
+                    display.innerText = currentInput;
+                    operator = '';
+                    previousInput = '';
+                }
+            } else {
+                if (currentInput !== '') {
+                    operator = value;
+                    previousInput = currentInput;
+                    currentInput = '';
+                    display.innerText = operator; 
+                }
+            }
         }
-      } else {
-        if (currentInput !== '') {
-          operator = value;
-          previousInput = currentInput;
-          currentInput = '';
-        }
-      }
-    }
-  });
+    });
 });
