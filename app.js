@@ -19,15 +19,17 @@ buttons.forEach((button) => {
         display.innerText = '';
       } else if (value === '=') {
         if (operator && previousInput !== '' && currentInput !== '') {
-          currentInput = eval(`${previousInput} ${operator} ${currentInput}`);
+          currentInput = String(eval(`${previousInput} ${operator} ${currentInput}`));
           display.innerText = currentInput;
           operator = '';
           previousInput = '';
         }
       } else {
-        operator = value;
-        previousInput = currentInput;
-        currentInput = '';
+        if (currentInput !== '') {
+          operator = value;
+          previousInput = currentInput;
+          currentInput = '';
+        }
       }
     }
   });
