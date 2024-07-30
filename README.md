@@ -1,73 +1,84 @@
-<!-- # Keya's Dope Calculator
+# Keya's Evil Calculator
 
-This lab provides an opportunity to practice DOM manipulation by building a calculator in the browser.
+This project is a simple web-based calculator with a unique twist: evil emojis rain down every time you press the equals button! The calculator performs basic arithmetic operations and has a modern, seafoam and light blue color scheme. The emojis stop raining after 3 seconds.
+
+## Features
+
+- Addition, subtraction, multiplication, and division operations
+- Clear (C) button to reset the calculator
+- Dynamically adjusts the font size of the result to fit within the display box
+- Evil emojis rain down behind the title and calculator when the equals button is pressed
 
 ## User Stories
 
-- As a user, I want to be able to select numbers to perform operations with them.
-- As a user, I want to be able to add two numbers together.
-- As a user, I want to be able to subtract one number from another.
-- As a user, I want to be able to multiply two numbers together.
-- As a user, I want to be able to divide one number by another.
-- As a user, I want to see the output of the mathematical operation.
-- As a user, I want to be able to clear all operations and start from 0.
+As a user, I want to:
 
-## Explanation of the Code
+- Select numbers to perform operations with them.
+- Add two numbers together.
+- Subtract one number from another.
+- Multiply two numbers together.
+- Divide one number by another.
+- See the output of the mathematical operation.
+- Clear all operations and start from 0.
+- Enjoy a unique visual effect when calculating results.
 
-### JavaScript (app.js)
+## File Structure
 
-1. **Selecting Elements:**
-   - `const buttons = document.querySelectorAll('.button');`: Selects all elements with the class `button`.
-   - `const display = document.querySelector('.display');`: Selects the element with the class `display`.
+```plaintext
+dom-events-lab/
+├── index.html
+├── app.js
+├── style.css
+└── README.md
 
-2. **Variables:**
-   - `let currentInput = '';`: Stores the current input value.
-   - `let operator = '';`: Stores the selected operator.
-   - `let previousInput = '';`: Stores the previous input value.
+## Instructions
 
-3. **Event Listeners:**
-   - Adds a click event listener to each button.
-   - Updates the display based on the button clicked.
-   - Handles operators and calculations.
+## Setup
 
-### CSS (style.css)
+1. Clone the Repository 
 
-- **General Styles:**
-  - `* { box-sizing: border-box; }`: Ensures that padding and border are included in the element's total width and height.
-  - `body`: Centers the calculator on the page and sets the font.
+Copy code
+git clone https://github.com/Keya-Moradi/DOM-EVENTS.git
+cd DOM-EVENTS
 
-- **Calculator Styles:**
-  - `#calculator`: Styles the main calculator container.
-  - `.display`: Styles the display area of the calculator.
-  - `.row`: Styles each row of buttons.
-  - `.button`: Styles each button.
-  - `.button.operator`: Styles the operator buttons.
-  - `.button.equals`: Styles the equals button.
+2. Open the Project:
+Open the index.html file in your preferred web browser. You can do this by double-clicking the file or by right-clicking and selecting "Open with" followed by your browser choice.
 
-### HTML (index.html)
+## Usage
+Using the Calculator:
+- Click on the number buttons (0-9) to enter numbers.
+- Click on the operator buttons (+, -, *, /) to choose an operation.
+- Click on the equals button (=) to compute the result.
+- Click on the clear button (C) to reset the calculator.
 
-- **Structure:**
-  - The main container is a `div` with the id `calculator`.
-  - Each row of buttons is a `div` with the class `row`.
-  - Each button is a `div` with the class `button`, and additional classes like `number`, `operator`, or `equals`.
+## Experience the Emoji Rain:
+- Press the equals button (=) to see evil emojis rain down.
+- The emojis will stop raining after 3 seconds.
+- Customization
+- You can customize the calculator by modifying the CSS for different color schemes and animations. - You can also add more functionalities or visual effects as desired.
 
-### Color Scheme
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+- Code Explanation
+- HTML
+- The HTML file sets up the structure of the calculator and includes references to the JavaScript and CSS files.
 
-- **Background Color:**
-  - Seafoam and light blue colors are used to create a calm and modern look.
-- **Button Colors:**
-  - Number buttons have a lighter background.
-  - Operator buttons have a slightly darker background.
-  - The equals button is distinct with an even darker background.
+## CSS
+The CSS file styles the calculator, sets the background color, and ensures the text fits within the display box. It also handles the animation of the evil emojis.
 
-### Button Click Animation
+## JavaScript
+The JavaScript file contains the logic for the calculator's functionality and the emoji rain effect. Key parts of the code include:
 
-- Buttons have a simple click animation that scales them down slightly when clicked.
+## Selecting elements: 
+Elements like buttons and the display are selected using document.querySelector.
 
-### Centering the Calculator
+## Event listeners: 
+Event listeners are added to the buttons to handle clicks.
 
-- The calculator is centered on the screen using flexbox on the `body` element.
+## Emoji rain:
+The createEmojis function generates and animates the evil emojis, while stopEmojis stops the rain after 4 seconds.
 
-### Page Title
-
-- The page title is set to "Keya's Dope Calculator". -->
+## Adjust font size:
+The adjustFontSize function dynamically changes the font size of the result based on its length.
