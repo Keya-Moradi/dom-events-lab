@@ -17,7 +17,7 @@
   
   h1 {
     font-size: 2em;
-    color: rgb(162, 81, 225); /* Change title color to hot pink */
+    color: rgb(146, 84, 241); /* Change title color to hot pink */
     margin-bottom: 20px;
     z-index: 1; /* Ensure the title stays above the emojis */
   }
@@ -29,9 +29,13 @@
     padding: 12px;
     display: flex;
     justify-content: flex-end;
+    align-items: center; /* Center text vertically */
     color: #004d61;
     border-radius: 4px;
     background-color: #a1e2e6;
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+    white-space: nowrap; /* Prevent text from wrapping */
   }
   
   #calculator {

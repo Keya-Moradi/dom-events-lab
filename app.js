@@ -23,6 +23,7 @@ buttons.forEach((button) => {
       } else if (value === '=') {
         if (operator && previousInput !== '' && currentInput !== '') {
           currentInput = String(eval(`${previousInput} ${operator} ${currentInput}`));
+          adjustFontSize(currentInput);
           display.innerText = currentInput;
           operator = '';
           previousInput = '';
@@ -64,4 +65,14 @@ function stopEmojis() {
   // Also remove any remaining emojis after stopping the interval
   const remainingEmojis = document.querySelectorAll('.emoji');
   remainingEmojis.forEach(emoji => emoji.remove());
+}
+
+function adjustFontSize(result) {
+  if (result.length > 10) {
+    display.style.fontSize = '16px';
+  } else if (result.length > 5) {
+    display.style.fontSize = '20px';
+  } else {
+    display.style.fontSize = '24px';
+  }
 }
