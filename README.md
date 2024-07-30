@@ -1,6 +1,6 @@
 # Keya's Evil Calculator
 
-This project is a simple web-based calculator with a unique twist: evil emojis rain down every time you press the equals button! The calculator performs basic arithmetic operations and has a modern, sea-foam and light blue color scheme. The emojis stop raining after 3 seconds.
+This project is a simple web-based calculator with a unique twist: evil emojis rain down every time you press the equals button! The calculator performs basic arithmetic operations and has a modern, sea-foam and light blue color scheme. The emojis stop raining after 4 seconds.
 
 ## Features
 
