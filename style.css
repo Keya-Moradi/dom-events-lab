@@ -6,6 +6,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh; 
+    margin: 0;
     font-family: system-ui, sans-serif;
     background-color: #d5f7f6;
   }
@@ -25,7 +27,6 @@
   #calculator {
     padding: 24px;
     width: 300px;
-    height: 400px;
     gap: 32px;
     display: flex;
     flex-direction: column;
@@ -46,8 +47,8 @@
   
   .button {
     padding: 0;
-    width: 40px;
-    height: 40px;
+    width: 60px; 
+    height: 60px; 
     cursor: pointer;
     font-size: 24px;
     display: flex;
@@ -57,6 +58,11 @@
     background-color: #a1e2e6;
     border-radius: 4px;
     border: 2px solid #004d61;
+    transition: transform 0.1s; 
+  }
+  
+  .button:active {
+    transform: scale(0.9); 
   }
   
   .button.operator {

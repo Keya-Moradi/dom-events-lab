@@ -1,4 +1,4 @@
-<!-- # DOM Events Lab
+<!-- # Keya's Cool Calculator
 
 This lab provides an opportunity to practice DOM manipulation by building a calculator in the browser.
 
@@ -58,4 +58,16 @@ This lab provides an opportunity to practice DOM manipulation by building a calc
 - **Button Colors:**
   - Number buttons have a lighter background.
   - Operator buttons have a slightly darker background.
-  - The equals button is distinct with an even darker background. -->
+  - The equals button is distinct with an even darker background.
+
+### Button Click Animation
+
+- Buttons have a simple click animation that scales them down slightly when clicked.
+
+### Centering the Calculator
+
+- The calculator is centered on the screen using flexbox on the `body` element.
+
+### Page Title
+
+- The page title is set to "Keya's cool calculator". -->
