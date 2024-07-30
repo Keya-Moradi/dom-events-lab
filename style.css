@@ -17,8 +17,9 @@
   
   h1 {
     font-size: 2em;
-    color: #004d61;
+    color: rgb(162, 81, 225); /* Change title color to hot pink */
     margin-bottom: 20px;
+    z-index: 1; /* Ensure the title stays above the emojis */
   }
   
   .display {
@@ -88,6 +89,7 @@
     position: absolute;
     font-size: 2rem;
     animation: fall 5s linear infinite;
+    z-index: 0; /* Ensure emojis stay behind the title and calculator */
   }
   
   @keyframes fall {
